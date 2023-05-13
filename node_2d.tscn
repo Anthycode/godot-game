@@ -5,9 +5,21 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(118, 70)
+position = Vector2(222, 203)
 texture = ExtResource("1_76g64")
 
 [node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(266, 205)
+position = Vector2(-234, -241)
+texture = ExtResource("1_76g64")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(-222, 201)
+texture = ExtResource("1_76g64")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+position = Vector2(232, -249)
+texture = ExtResource("1_76g64")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+position = Vector2(2, -5)
 texture = ExtResource("1_76g64")
