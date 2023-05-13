@@ -17,7 +17,8 @@ position = Vector2(-222, 201)
 texture = ExtResource("1_76g64")
 
 [node name="Icon4" type="Sprite2D" parent="."]
-position = Vector2(232, -249)
+position = Vector2(-268.5, 20.5)
+scale = Vector2(8.82031, 5.21094)
 texture = ExtResource("1_76g64")
 
 [node name="Icon5" type="Sprite2D" parent="."]
