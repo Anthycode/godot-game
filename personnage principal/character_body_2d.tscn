@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://puoylxct8m0p"]
+[gd_scene load_steps=3 format=3 uid="uid://cdlh65j3f5cp"]
 
 [ext_resource type="Texture2D" uid="uid://cey8rdyyi6p03" path="res://assets/icon.svg" id="1_nkvvv"]
 
@@ -6,7 +6,7 @@
 size = Vector2(125, 126)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(218, 332)
+position = Vector2(662, 58)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
