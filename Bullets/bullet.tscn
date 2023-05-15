@@ -15,7 +15,3 @@ texture = ExtResource("1_pdofi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_332t4")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(0, 24)
-scale = Vector2(0.35, 0.25)

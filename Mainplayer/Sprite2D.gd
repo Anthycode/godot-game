@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 var plBullet := preload("res://Bullets/bullet.gd")
 
