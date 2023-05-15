@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var plBullet := preload("res://Bullets/bullet.tscn")
+
 @onready var animatedSprite := $AnimatedSprite2D
 
 @export var speed: float = 100
@@ -14,6 +16,10 @@ func _process(delta):
 	else:
 		animatedSprite.play("left")
 	#check if we are shooting
+	if Input.is_action_just_pressed("shoot"):
+		var bullet = plBullet.instance()
+		bullet.position = position
+		get_tree().current_scene.add_child(bullet)
 
 
 func _physics_process(delta):
