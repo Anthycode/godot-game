@@ -45,10 +45,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Area2D"]
+[node name="player" type="Area2D"]
 position = Vector2(54, 31)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_6gjyr")
+speed = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 4)
