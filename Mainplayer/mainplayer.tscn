@@ -46,12 +46,25 @@ animations = [{
 }]
 
 [node name="Mainplayer" type="CharacterBody2D"]
+position = Vector2(63, 52)
 script = ExtResource("1_7dgos")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_yjdtp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_8urd0")
 animation = &"straight"
+
+[node name="FiringPositions" type="Node2D" parent="."]
+
+[node name="LeftGunf" type="Node2D" parent="FiringPositions"]
+position = Vector2(-13, -17)
+
+[node name="RightGunf2" type="Node2D" parent="FiringPositions"]
+position = Vector2(13, -17)
+
+[node name="FireDelayTimer" type="Timer" parent="."]
+one_shot = true

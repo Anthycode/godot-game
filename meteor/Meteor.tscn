@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbwuadnd805dl"]
+
+[ext_resource type="Texture2D" uid="uid://c12odpk6opt1k" path="res://Textures/meteorBig.png" id="1_qlsql"]
+[ext_resource type="Script" path="res://meteor/Meteor.gd" id="1_xdmu8"]
+
+[node name="Meteor" type="Area2D" groups=["damageable"]]
+script = ExtResource("1_xdmu8")
+minSpeed = 50.0
+maxSpeed = 80.0
+minRotationRate = -80.0
+maxRotationRate = 80.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qlsql")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-54, 28, -21, 27, 17, 55, 67, 33, 60, -16, 15, -56, -44, -41, -67, -6, -55, 27, -54, 27)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0.999998, -1.5)
+scale = Vector2(6.8, 5.25)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
