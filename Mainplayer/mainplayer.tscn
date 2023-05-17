@@ -54,17 +54,17 @@ position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_yjdtp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_8urd0")
 animation = &"straight"
 
 [node name="FiringPositions" type="Node2D" parent="."]
 
 [node name="LeftGunf" type="Node2D" parent="FiringPositions"]
-position = Vector2(-13, -17)
+position = Vector2(-2, -16)
 
 [node name="RightGunf2" type="Node2D" parent="FiringPositions"]
-position = Vector2(13, -17)
+position = Vector2(29, -16)
 
 [node name="FireDelayTimer" type="Timer" parent="."]
 one_shot = true

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name  Player #for put the player into a class
 var plBullet := preload("res://Bullets/bullet.tscn")
 
 @onready var animatedSprite := $AnimatedSprite2D
@@ -7,6 +7,7 @@ var plBullet := preload("res://Bullets/bullet.tscn")
 @onready var fireDelayTimer := $FireDelayTimer
 @export var speed: float = 100
 @export var fireDelay: float = 0.1
+@export var life: int = 3
 
 var vel := Vector2(0, 0) #vel for velocity
 
@@ -47,3 +48,9 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 0, viewRect.size.x)  #Clamps the value, returning a Variant not less than min and not more than max.
 	position.y = clamp(position.y, 0, viewRect.size.y)
 
+func damage(amount: int):
+	life -= amount
+	print("Player Life = %s" % life)
+	if life <= 0:
+		print("Player Died")
+		queue_free()
