@@ -9,8 +9,8 @@
 position = Vector2(-15, 3)
 
 [node name="backround" type="Sprite2D" parent="."]
-position = Vector2(16, -3)
-scale = Vector2(0.461, 0.479359)
+position = Vector2(14, -3)
+scale = Vector2(0.453, 0.479359)
 texture = ExtResource("1_3mbr7")
 centered = false
 

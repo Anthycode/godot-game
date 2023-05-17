@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cusqvh25uqn4y"]
+[gd_scene load_steps=9 format=3 uid="uid://cusqvh25uqn4y"]
 
 [ext_resource type="Texture2D" uid="uid://bx8adjwfexrkx" path="res://Textures/player_sheet.png" id="1_mg8ag"]
 [ext_resource type="Script" path="res://Mainplayer.gd" id="1_p60pw"]
+[ext_resource type="Texture2D" uid="uid://c3wobahl73xbu" path="res://Textures/shield.png" id="3_c012f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ujxy"]
 radius = 25.4951
@@ -67,3 +68,13 @@ position = Vector2(29, -16)
 
 [node name="FireDelayTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="invincibilitytimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Shield" type="Sprite2D" parent="."]
+position = Vector2(-0.375001, -1.75)
+scale = Vector2(0.495033, 0.529661)
+texture = ExtResource("3_c012f")
+
+[connection signal="timeout" from="invincibilitytimer" to="." method="_on_invincibilitytimer_timeout"]
