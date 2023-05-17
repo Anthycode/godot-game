@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cusqvh25uqn4y"]
 
-[ext_resource type="Script" path="res://Mainplayer/mainplayer.gd" id="1_7dgos"]
 [ext_resource type="Texture2D" uid="uid://bx8adjwfexrkx" path="res://Textures/player_sheet.png" id="1_mg8ag"]
+[ext_resource type="Script" path="res://Mainplayer.gd" id="1_p60pw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yjdtp"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ujxy"]
 radius = 25.4951
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6uyb"]
@@ -18,7 +18,7 @@ region = Rect2(132, 0, 59, 64)
 atlas = ExtResource("1_mg8ag")
 region = Rect2(5, 0, 62, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8urd0"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_215h0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -45,17 +45,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Mainplayer" type="CharacterBody2D"]
-position = Vector2(63, 52)
-script = ExtResource("1_7dgos")
+[node name="Mainplayer" type="Area2D"]
+script = ExtResource("1_p60pw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_yjdtp")
+shape = SubResource("CircleShape2D_2ujxy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 1)
-sprite_frames = SubResource("SpriteFrames_8urd0")
+sprite_frames = SubResource("SpriteFrames_215h0")
 animation = &"straight"
 
 [node name="FiringPositions" type="Node2D" parent="."]
