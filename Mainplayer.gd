@@ -64,8 +64,10 @@ func damage(amount: int):
 	
 	invincibilityTimer.start(damageInvincibilityTimer)
 	shieldSprit.visible = true            #shield going to be visible
+	
 	life -= amount
-	print("Player Life = %s" % life)
+	Signals.emit_signal("on_player_life_changed", life)
+	
 	if life <= 0:
 		print("Player Died")
 		queue_free()

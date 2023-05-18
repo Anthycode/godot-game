@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwg02j8cjkulq"]
+[gd_scene load_steps=6 format=3 uid="uid://bwg02j8cjkulq"]
 
 [ext_resource type="Texture2D" uid="uid://dnpqerposen26" path="res://Textures/backround_multiblue.jpeg" id="1_3mbr7"]
 [ext_resource type="PackedScene" uid="uid://cusqvh25uqn4y" path="res://Mainplayer/mainplayer.tscn" id="1_qb2oy"]
 [ext_resource type="Texture2D" uid="uid://bog3b337vxxhq" path="res://Textures/starBig.png" id="2_7ycei"]
 [ext_resource type="PackedScene" uid="uid://cbwuadnd805dl" path="res://meteor/Meteor.tscn" id="4_s64kg"]
+[ext_resource type="PackedScene" uid="uid://rumrbd8t61qc" path="res://HUD/hud.tscn" id="5_lalen"]
 
-[node name="Gameplay" type="Node2D"]
-position = Vector2(-15, 3)
+[node name="Gameplay" type="Node"]
 
 [node name="backround" type="Sprite2D" parent="."]
 position = Vector2(16, -3)
@@ -35,3 +35,5 @@ position = Vector2(271, 431)
 
 [node name="Meteor" parent="." instance=ExtResource("4_s64kg")]
 position = Vector2(110, 188)
+
+[node name="HUD" parent="." instance=ExtResource("5_lalen")]
