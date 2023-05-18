@@ -7,7 +7,7 @@ var pLifeIcon := preload("res://HUD/life_icon.tscn")
 func _ready():
 	clearLives()
 	
-	Signals.connect("on_player_life_changed", self, "_on_player_life_changed")
+	Signals.on_player_life_changed.connect(self._on_player_life_changed)
 
 
 func clearLives():
@@ -21,4 +21,5 @@ func setLives(lives: int):
 		lifeContainer.add_child(pLifeIcon.instantiate())
 
 func _on_player_life_changed(life: int):
-	shieldSprite.visible = false
+	setLives(life)
+	

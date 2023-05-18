@@ -9,7 +9,7 @@
 [node name="Gameplay" type="Node"]
 
 [node name="backround" type="Sprite2D" parent="."]
-position = Vector2(16, -3)
+position = Vector2(1.19209e-06, -21)
 scale = Vector2(0.461, 0.479359)
 texture = ExtResource("1_3mbr7")
 centered = false
@@ -31,9 +31,13 @@ angle_max = 44.2
 scale_amount_min = 0.1
 
 [node name="Mainplayer" parent="." instance=ExtResource("1_qb2oy")]
-position = Vector2(271, 431)
-
-[node name="Meteor" parent="." instance=ExtResource("4_s64kg")]
-position = Vector2(110, 188)
+position = Vector2(255, 413)
 
 [node name="HUD" parent="." instance=ExtResource("5_lalen")]
+offset_left = -6.0
+offset_top = -11.0
+offset_right = -5.0
+offset_bottom = -11.0001
+
+[node name="Meteor" parent="." instance=ExtResource("4_s64kg")]
+position = Vector2(239, 83)
