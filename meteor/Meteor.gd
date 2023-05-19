@@ -16,6 +16,7 @@ var playerInArea: Player = null
 func _ready():
 	speed = randf_range(minSpeed, maxSpeed)
 	rotationRate = randf_range(minRotationRate, maxRotationRate)
+	
 
 func _process(delta):
 	if playerInArea != null:

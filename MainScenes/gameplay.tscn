@@ -1,15 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwg02j8cjkulq"]
+[gd_scene load_steps=7 format=3 uid="uid://bwg02j8cjkulq"]
 
 [ext_resource type="Texture2D" uid="uid://dnpqerposen26" path="res://Textures/backround_multiblue.jpeg" id="1_3mbr7"]
 [ext_resource type="PackedScene" uid="uid://cusqvh25uqn4y" path="res://Mainplayer/mainplayer.tscn" id="1_qb2oy"]
 [ext_resource type="Texture2D" uid="uid://bog3b337vxxhq" path="res://Textures/starBig.png" id="2_7ycei"]
 [ext_resource type="PackedScene" uid="uid://cbwuadnd805dl" path="res://meteor/Meteor.tscn" id="4_s64kg"]
 [ext_resource type="PackedScene" uid="uid://rumrbd8t61qc" path="res://HUD/hud.tscn" id="5_lalen"]
+[ext_resource type="PackedScene" uid="uid://ck32p6wxmklv6" path="res://Enemy/fast_enemy.tscn" id="6_575ci"]
 
 [node name="Gameplay" type="Node"]
 
 [node name="backround" type="Sprite2D" parent="."]
-position = Vector2(1.19209e-06, -21)
+z_index = -100
 scale = Vector2(0.461, 0.479359)
 texture = ExtResource("1_3mbr7")
 centered = false
@@ -30,14 +31,23 @@ angle_min = -46.2
 angle_max = 44.2
 scale_amount_min = 0.1
 
-[node name="Mainplayer" parent="." instance=ExtResource("1_qb2oy")]
-position = Vector2(255, 413)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="." instance=ExtResource("5_lalen")]
-offset_left = -6.0
-offset_top = -11.0
-offset_right = -5.0
-offset_bottom = -11.0001
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("5_lalen")]
+anchors_preset = 10
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_vertical = 1
+
+[node name="Mainplayer" parent="." instance=ExtResource("1_qb2oy")]
+z_index = 100
+position = Vector2(255, 413)
 
 [node name="Meteor" parent="." instance=ExtResource("4_s64kg")]
 position = Vector2(239, 83)
+
+[node name="FastEnemy" parent="." instance=ExtResource("6_575ci")]
+position = Vector2(67, 135)

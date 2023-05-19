@@ -19,7 +19,7 @@ var plBullet := preload("res://Bullets/bullet.tscn")
 var vel := Vector2(0, 0) #vel for velocity
 func _ready():
 	shieldSprit.visible = false
-
+	Signals.emit_signal("on_player_life_changed", life)
 func _process(delta):
 	#Animate
 	if vel.x == 0:
@@ -46,7 +46,6 @@ func _physics_process(delta):
 		dirVec.x = 1
 	if Input.is_action_pressed("move_up"):
 		dirVec.y = -1
-		Signals.emit_signal("on_player_life_changed", life)
 	elif Input.is_action_pressed("move_down"):
 		dirVec.y = 1
 	
