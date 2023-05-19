@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwg02j8cjkulq"]
+[gd_scene load_steps=9 format=3 uid="uid://bwg02j8cjkulq"]
 
 [ext_resource type="Texture2D" uid="uid://dnpqerposen26" path="res://Textures/backround_multiblue.jpeg" id="1_3mbr7"]
 [ext_resource type="PackedScene" uid="uid://cusqvh25uqn4y" path="res://Mainplayer/mainplayer.tscn" id="1_qb2oy"]
+[ext_resource type="Script" path="res://MainScenes/gameplay.gd" id="1_tfulb"]
 [ext_resource type="Texture2D" uid="uid://bog3b337vxxhq" path="res://Textures/starBig.png" id="2_7ycei"]
 [ext_resource type="PackedScene" uid="uid://cbwuadnd805dl" path="res://meteor/Meteor.tscn" id="4_s64kg"]
 [ext_resource type="PackedScene" uid="uid://rumrbd8t61qc" path="res://HUD/hud.tscn" id="5_lalen"]
 [ext_resource type="PackedScene" uid="uid://ck32p6wxmklv6" path="res://Enemy/fast_enemy.tscn" id="6_575ci"]
+[ext_resource type="PackedScene" uid="uid://d1cumlvngof5c" path="res://Enemy/slow_shooter.tscn" id="7_l3est"]
 
 [node name="Gameplay" type="Node"]
+script = ExtResource("1_tfulb")
+enemy_scenes = Array[PackedScene]([ExtResource("6_575ci"), ExtResource("7_l3est")])
 
 [node name="backround" type="Sprite2D" parent="."]
 z_index = -100
@@ -49,5 +53,7 @@ position = Vector2(255, 413)
 [node name="Meteor" parent="." instance=ExtResource("4_s64kg")]
 position = Vector2(239, 83)
 
-[node name="FastEnemy" parent="." instance=ExtResource("6_575ci")]
-position = Vector2(67, 135)
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="EnemySpawnTimer" type="Timer" parent="."]
+autostart = true
