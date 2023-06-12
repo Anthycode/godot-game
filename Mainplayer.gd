@@ -10,6 +10,7 @@ var plBullet := preload("res://Bullets/bullet.tscn")
 @onready var invincibilityTimer := $invincibilitytimer
 @onready var shieldSprit := $Shield
 
+@export var isPlayerAliveeee = 1
 
 @export var speed: float = 100
 @export var fireDelay: float = 0.1
@@ -69,8 +70,12 @@ func damage(amount: int):
 	
 	if life <= 0:
 		print("Player Died")
+		print(isPlayerAliveeee)
+		isPlayerAliveeee=0
+		print(isPlayerAliveeee)
 		queue_free()
 
 
 func _on_invincibilitytimer_timeout():
 	shieldSprit.visible = false
+

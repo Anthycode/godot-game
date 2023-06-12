@@ -1,4 +1,5 @@
 extends Area2D
+class_name Enemy
 @export var verticalSpeed := 10.0
 @export var health: int = 5
 var playerInArea: Player = null

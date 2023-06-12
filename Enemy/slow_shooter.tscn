@@ -10,10 +10,10 @@ size = Vector2(96, 50)
 [node name="SlowShooter" instance=ExtResource("1_prju7")]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("2_tiw1e")
-verticalSpeed = 60.0
-health = 30
 FireRate = 2.0
 horizontalSpeed = 80.0
+verticalSpeed = 60.0
+health = 30
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(-1, 2)

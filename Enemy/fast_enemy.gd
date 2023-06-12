@@ -1,9 +1,6 @@
-extends Area2D
+extends Enemy
 
 @export var rotationRate := 20
-@export var verticalSpeed := 10.0
-@export var health: int = 5
-var playerInArea: Player = null
 
 
 func _process(delta):

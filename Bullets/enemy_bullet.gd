@@ -19,3 +19,4 @@ func _on_area_entered(area):
 		
 		area.damage(1)
 		queue_free() #make the bullet disapear 
+		

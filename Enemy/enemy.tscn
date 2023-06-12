@@ -8,6 +8,8 @@ radius = 35.0571
 
 [node name="Enemy" type="Area2D" groups=["damageable"]]
 script = ExtResource("1_hharf")
+verticalSpeed = null
+health = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4ywk5")

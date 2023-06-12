@@ -1,16 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ck32p6wxmklv6"]
+[gd_scene load_steps=2 format=3 uid="uid://ck32p6wxmklv6"]
 
 [ext_resource type="PackedScene" uid="uid://claw2iajwia1e" path="res://Enemy/enemy.tscn" id="1_wdswk"]
-[ext_resource type="Script" path="res://Enemy/fast_enemy.gd" id="2_7bly0"]
 
 [node name="FastEnemy" instance=ExtResource("1_wdswk")]
-script = ExtResource("2_7bly0")
-rotationRate = 20
-verticalSpeed = 100.0
+verticalSpeed = 50.0
+health = 20
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.7, 0.7)
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="2"]
-position = Vector2(1, 1)
-scale = Vector2(3.875, 3.7375)
+position = Vector2(1.90735e-06, 0.5)
+scale = Vector2(3.3, 3.35)

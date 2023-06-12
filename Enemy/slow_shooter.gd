@@ -1,14 +1,13 @@
-extends Area2D
+extends Enemy
 
 var plBullet := preload("res://Bullets/enemy_bullet.tscn")
 @onready var fireTimer := $FireTimer
 @onready var firingPositions := $FiringPositions
-@export var verticalSpeed := 10.0
-@export var health: int = 5
+
 @export var FireRate :=3.0
 @export var horizontalSpeed := 50.0
 var horizontalDirection: int = 1 
-var playerInArea: Player = null
+
 
 
 func fire():

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rumrbd8t61qc"]
+[gd_scene load_steps=3 format=3 uid="uid://rumrbd8t61qc"]
 
 [ext_resource type="Script" path="res://HUD/hud.gd" id="1_l2xy6"]
+[ext_resource type="Script" path="res://HUD/Score.gd" id="2_olex3"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -43,4 +44,5 @@ grow_horizontal = 2
 text = "000
 "
 horizontal_alignment = 1
+script = ExtResource("2_olex3")
 metadata/_edit_group_ = true
